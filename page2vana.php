@@ -39,13 +39,10 @@
 		}
 	}//foreach lõppeb
 	
-	//loeb fotode arvu ära fotode kaustas
 	$file_count = count($all_photos);
-	//random number generator, genereerib ühe arvu fotode koguse seast
+	//random number generator
 	$photo_num = mt_rand(0, $file_count-1);
 	//<img src="photos/pilt.jpg" alt="tallinna ülikool">
-	
-	//pärast juhusliku foto loosimist ja selle näitamise jaoks HTML koodi moodustamist
 	$photo_html= '<img src=" '.$photo_dir .$all_photos[$photo_num] . ' " alt= "Tallinna Ülikool">';
 	$photo_list_html="\n <ul> \n";
 	
@@ -64,22 +61,6 @@
 	}
 	$photo_list_html.="</ul> \n";  //.= pane juurde
 	
-	/*kas kasutaja klikkis selle uue, foto valimise vormi submit nuppu
-			Kui jah, siis tuleb moodustada HTML kood just valitud pildi näitamiseks*/
-			
-	$chosen_picture = null; 
-	if(isset($_POST["submit_todays_adjective"])){
-		//echo "klikiti nuppu";
-		if(!empty($_POST["chosen_picture_nr"])){	
-			$selected = $_POST["chosen_picture_nr"];
-			echo 'You have chosen: ' . $selected;
-			$chosen_picture='<img src=" '.$photo_dir .$all_photos["chosen_picture_nr"] . ' " alt= "Tallinna Ülikool">';
-		}else{
-			$chosen_picture = $photo_html;
-		}
-	}
-	
-	//select elemenndi moodustamine
 	$photo_select_html='<select name="photo_select">' ."\n";
 	for ($i=0; $i<$file_count; $i++){
 		$photo_select_html.= '<option value="' .$i .'">' .$all_photos[$i] ."</option> \n";
@@ -107,16 +88,14 @@
 		<input type="submit" name="submit_todays_adjective" value="saada ära">
 		<span><?php echo $adjective_error; ?></span>
 	</form>
-		
+	<?php echo $today_html; ?>
 	<hr>
 	
-	
 	<form method="POST">
-		<input type="number" name="chosen_picture_nr" value="<?php echo $photo_select_html ?>" >
-
+		<?php echo $photo_select_html ?>
 	</form>
 	<?php 
-		echo $chosen_picture; 
+
 		echo $photo_html; 
 		echo $photo_list_html;
 	?>
