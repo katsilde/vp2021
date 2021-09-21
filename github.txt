@@ -3,7 +3,12 @@ github.com/katsilde
 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
 
 
-
+cd public_html
+cd vp2021
+git add .
+git commit -m "kirjeldus"
+git push 
+token
 
 
 
@@ -15,89 +20,28 @@ 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
 
 greeny värk push ja pull
 
-login as: ksilde
-ksilde@lin2.tlu.ee's password:
-Access denied
-ksilde@lin2.tlu.ee's password:
-Last login: Mon Sep 13 20:09:39 2021 from yhikas.tps.edu.ee
-Disk quotas for user ksilde (uid 51866):
-     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace
-/dev/mapper/clr0-opt
-                      0  102400  128000               1      10     100
-/dev/mapper/clr0-home2
-                     28  3145728 3145728               7   20000   20000
-[ksilde@lin2 ~]$ ssh greeny.cs.tlu.ee -l katsil
-The authenticity of host 'greeny.cs.tlu.ee (193.40.238.41)' can't be established.
-RSA key fingerprint is ed:1b:25:4d:e0:69:bd:48:aa:98:bc:f3:a3:ae:5d:4f.
-Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added 'greeny.cs.tlu.ee,193.40.238.41' (RSA) to the list of known hosts.
+login as: katsil
 katsil@greeny.cs.tlu.ee's password:
-Last login: Mon Sep 13 10:29:49 2021 from t302-13.cs.tlu.ee
-[katsil@greeny ~]$ ls
-public_html
-[katsil@greeny ~]$ cd public.html
--bash: cd: public.html: No such file or directory
+Last login: Tue Sep 21 08:18:20 2021 from m543-8.cs.tlu.ee
+[katsil@greeny ~]$ git add
+fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[katsil@greeny ~]$ git add .
+fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[katsil@greeny ~]$ git remote -v
+fatal: Not a git repository (or any parent up to mount point /home)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+[katsil@greeny ~]$ cd vp2021
+-bash: cd: vp2021: No such file or directory
 [katsil@greeny ~]$ cd public_html
-[katsil@greeny public_html]$ pwd
-/home/katsil/public_html
-[katsil@greeny public_html]$ ls
-veebiproge
-[katsil@greeny public_html]$ cd ..
-[katsil@greeny ~]$ pwd
-/home/katsil
-[katsil@greeny ~]$ cd public_html/
-[katsil@greeny public_html]$ cd ..
-[katsil@greeny ~]$ cd public_html/
-[katsil@greeny public_html]$ pwd
-/home/katsil/public_html
-[katsil@greeny public_html]$ git clone https://katsilde@github.com/katsilde/vp2021.git
-Cloning into 'vp2021'...
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (3/3), done.
-[katsil@greeny public_html]$ git config user.name
 [katsil@greeny public_html]$ cd vp2021
-[katsil@greeny vp2021]$ git config user.name "Katrin Silde"
-[katsil@greeny vp2021]$ git config user.name
-Katrin Silde
-[katsil@greeny vp2021]$ git config user.email gitkatsilde@users.noreply.github.com
-[katsil@greeny vp2021]$ git config user.email
-gitkatsilde@users.noreply.github.com
 [katsil@greeny vp2021]$ git add .
-[katsil@greeny vp2021]$ git status
-# On branch main
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#       new file:   3700x1100_pildivalik187.jpg
-#       new file:   duck.jpg
-#       new file:   indeks.html
-#       new file:   page.php
-#       new file:   photos/index.html
-#       new file:   photos/tlu_astra_600x400_1.jpg
-#       new file:   photos/tlu_hoov_600x400_1.jpg
-#       new file:   photos/tlu_mare_1.jpg
-#       new file:   serverinfo.php
-#
-[katsil@greeny vp2021]$ git commit -m "kaks esimest tundi"
-[main 941a28e] kaks esimest tundi
- 9 files changed, 120 insertions(+)
- create mode 100644 3700x1100_pildivalik187.jpg
- create mode 100644 duck.jpg
- create mode 100644 indeks.html
- create mode 100644 page.php
- create mode 100644 photos/index.html
- create mode 100644 photos/tlu_astra_600x400_1.jpg
- create mode 100644 photos/tlu_hoov_600x400_1.jpg
- create mode 100644 photos/tlu_mare_1.jpg
- create mode 100644 serverinfo.php
-[katsil@greeny vp2021]$ git status
-# On branch main
-# Your branch is ahead of 'origin/main' by 1 commit.
-#   (use "git push" to publish your local commits)
-#
-nothing to commit, working directory clean
+[katsil@greeny vp2021]$ git commit -m "neljanda tunni töö"
+[main cd276a1] neljanda tunni töö
+ 2 files changed, 174 insertions(+), 103 deletions(-)
+ create mode 100644 list_films.php
+ rewrite page2vana.php (61%)
 [katsil@greeny vp2021]$ git push
 warning: push.default is unset; its implicit value is changing in
 Git 2.0 from 'matching' to 'simple'. To squelch this message
@@ -114,155 +58,12 @@ See 'git help config' and search for 'push.default' for further information.
 'current' instead of 'simple' if you sometimes use older versions of Git)
 
 Password for 'https://katsilde@github.com':
-Counting objects: 13, done.
-Compressing objects: 100% (12/12), done.
-Writing objects: 100% (12/12), 1.43 MiB | 1.56 MiB/s, done.
-Total 12 (delta 2), reused 0 (delta 0)
-remote: Resolving deltas: 100% (2/2), done.
+Counting objects: 10, done.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 5.21 KiB | 0 bytes/s, done.
+Total 8 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
 To https://katsilde@github.com/katsilde/vp2021.git
-   21da724..941a28e  main -> main
-[katsil@greeny vp2021]$
-
-
-
-
-
-
-login as: ksilde
-ksilde@lin2.tlu.ee's password:
-Access denied
-ksilde@lin2.tlu.ee's password:
-Last login: Mon Sep 13 20:09:39 2021 from yhikas.tps.edu.ee
-Disk quotas for user ksilde (uid 51866):
-     Filesystem  blocks   quota   limit   grace   files   quota   limit   grace
-/dev/mapper/clr0-opt
-                      0  102400  128000               1      10     100
-/dev/mapper/clr0-home2
-                     28  3145728 3145728               7   20000   20000
-[ksilde@lin2 ~]$ ssh greeny.cs.tlu.ee -l katsil
-The authenticity of host 'greeny.cs.tlu.ee (193.40.238.41)' can't be established.
-RSA key fingerprint is ed:1b:25:4d:e0:69:bd:48:aa:98:bc:f3:a3:ae:5d:4f.
-Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added 'greeny.cs.tlu.ee,193.40.238.41' (RSA) to the list of known hosts.
-katsil@greeny.cs.tlu.ee's password:
-Last login: Mon Sep 13 10:29:49 2021 from t302-13.cs.tlu.ee
-[katsil@greeny ~]$ ls
-public_html
-[katsil@greeny ~]$ cd public.html
--bash: cd: public.html: No such file or directory
-[katsil@greeny ~]$ cd public_html
-[katsil@greeny public_html]$ pwd
-/home/katsil/public_html
-[katsil@greeny public_html]$ ls
-veebiproge
-[katsil@greeny public_html]$ cd ..
-[katsil@greeny ~]$ pwd
-/home/katsil
-[katsil@greeny ~]$ cd public_html/
-[katsil@greeny public_html]$ cd ..
-[katsil@greeny ~]$ cd public_html/
-[katsil@greeny public_html]$ pwd
-/home/katsil/public_html
-[katsil@greeny public_html]$ git clone https://katsilde@github.com/katsilde/vp2021.git
-Cloning into 'vp2021'...
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (3/3), done.
-[katsil@greeny public_html]$ git config user.name
-[katsil@greeny public_html]$ cd vp2021
-[katsil@greeny vp2021]$ git config user.name "Katrin Silde"
-[katsil@greeny vp2021]$ git config user.name
-Katrin Silde
-[katsil@greeny vp2021]$ git config user.email gitkatsilde@users.noreply.github.com
-[katsil@greeny vp2021]$ git config user.email
-gitkatsilde@users.noreply.github.com
-[katsil@greeny vp2021]$ git add .
-[katsil@greeny vp2021]$ git status
-# On branch main
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#       new file:   3700x1100_pildivalik187.jpg
-#       new file:   duck.jpg
-#       new file:   indeks.html
-#       new file:   page.php
-#       new file:   photos/index.html
-#       new file:   photos/tlu_astra_600x400_1.jpg
-#       new file:   photos/tlu_hoov_600x400_1.jpg
-#       new file:   photos/tlu_mare_1.jpg
-#       new file:   serverinfo.php
-#
-[katsil@greeny vp2021]$ git commit -m "kaks esimest tundi"
-[main 941a28e] kaks esimest tundi
- 9 files changed, 120 insertions(+)
- create mode 100644 3700x1100_pildivalik187.jpg
- create mode 100644 duck.jpg
- create mode 100644 indeks.html
- create mode 100644 page.php
- create mode 100644 photos/index.html
- create mode 100644 photos/tlu_astra_600x400_1.jpg
- create mode 100644 photos/tlu_hoov_600x400_1.jpg
- create mode 100644 photos/tlu_mare_1.jpg
- create mode 100644 serverinfo.php
-[katsil@greeny vp2021]$ git status
-# On branch main
-# Your branch is ahead of 'origin/main' by 1 commit.
-#   (use "git push" to publish your local commits)
-#
-nothing to commit, working directory clean
-[katsil@greeny vp2021]$ git push
-warning: push.default is unset; its implicit value is changing in
-Git 2.0 from 'matching' to 'simple'. To squelch this message
-and maintain the current behavior after the default changes, use:
-
-  git config --global push.default matching
-
-To squelch this message and adopt the new behavior now, use:
-
-  git config --global push.default simple
-
-See 'git help config' and search for 'push.default' for further information.
-(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
-'current' instead of 'simple' if you sometimes use older versions of Git)
-
-Password for 'https://katsilde@github.com':
-Counting objects: 13, done.
-Compressing objects: 100% (12/12), done.
-Writing objects: 100% (12/12), 1.43 MiB | 1.56 MiB/s, done.
-Total 12 (delta 2), reused 0 (delta 0)
-remote: Resolving deltas: 100% (2/2), done.
-To https://katsilde@github.com/katsilde/vp2021.git
-   21da724..941a28e  main -> main
-[katsil@greeny vp2021]$ git add .
-[katsil@greeny vp2021]$ git commit -m kolmas tund lõppes
-error: pathspec 'tund' did not match any file(s) known to git.
-error: pathspec '"l\303\265ppes"' did not match any file(s) known to git.
-[katsil@greeny vp2021]$ git commit -m "kaks esimest tundi"
-[main b54f5ed] kaks esimest tundi
- 1 file changed, 103 insertions(+)
- create mode 100644 page2.php
-[katsil@greeny vp2021]$ git push
-warning: push.default is unset; its implicit value is changing in
-Git 2.0 from 'matching' to 'simple'. To squelch this message
-and maintain the current behavior after the default changes, use:
-
-  git config --global push.default matching
-
-To squelch this message and adopt the new behavior now, use:
-
-  git config --global push.default simple
-
-See 'git help config' and search for 'push.default' for further information.
-(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
-'current' instead of 'simple' if you sometimes use older versions of Git)
-
-Password for 'https://katsilde@github.com':
-Counting objects: 4, done.
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 1.57 KiB | 0 bytes/s, done.
-Total 3 (delta 1), reused 0 (delta 0)
-remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-To https://katsilde@github.com/katsilde/vp2021.git
-   941a28e..b54f5ed  main -> main
+   b54f5ed..cd276a1  main -> main
+[katsil@greeny vp2021]$ ^C
 [katsil@greeny vp2021]$
