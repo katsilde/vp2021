@@ -66,3 +66,20 @@
         $conn->close();
         return $notice; 
     }
+	function upload_profile($description, $bg_color, $text_color){
+		$notice = null;
+		$conn = new mysqli($GLOBALS["server_host"], $GLOBALS["server_user_name"], $GLOBALS["server_password"], $GLOBALS["database"]);
+		$conn->set_charset("utf8");
+		$_SESSION["user_id"]
+		$stmt = $conn->prepare("INSERT INTO vpr_userprofiles (description, bgcolor, txtcolor) VALUES(?,?,?)");
+		echo $conn->error;
+		if($stmt->execute()){
+				$notice = "kasutajaprofiil ülesse laetud";
+		} else {
+				$notice = "kasutajaprofiili ülesse laadimine ei õnnestunud" .$stmt->error;
+		}
+		
+		$stmt->close();
+        $conn->close();
+        return $notice; 
+	}

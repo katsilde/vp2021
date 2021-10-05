@@ -18,7 +18,16 @@
 	
 	$notice=null;
 	$description=null;//tulevikus loetakse siia andembaasis olev kirjeldus
-	
+	$bg_color=$_SESSION["bg_color"];
+	$text_color=$_SESSION["text_color"];
+	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    //kas klikiti submit nuppu
+		if(isset($_POST["profile_submit"])){
+			
+			//kui kõik korras, salvestame
+				$notice = upload_profile($description, $bg_color, $text_color);
+		}
+	}
 	require_once("page_header.php")
 ?>
 
