@@ -16,7 +16,16 @@
 	require_once("fnc_general.php");
     //echo $server_host;
 	
-	$notice=null;
+	$notice = null;
+    $description = read_user_description();
+    
+	if(isset($_POST["profile_submit"])){
+		$description = test_input(filter_var($_POST["description_input"], FILTER_SANITIZE_STRING));
+		$notice = upload_profile($description, $_POST["bg_color_input"],$_POST["text_color_input"]);
+	}
+	
+	
+	/*$notice=null;
 	$description=null;//tulevikus loetakse siia andembaasis olev kirjeldus
 	$bg_color=$_SESSION["bg_color"];
 	$text_color=$_SESSION["text_color"];
@@ -27,7 +36,7 @@
 			//kui kõik korras, salvestame
 				$notice = upload_profile($description, $bg_color, $text_color);
 		}
-	}
+	}*/
 	require_once("page_header.php")
 ?>
 
